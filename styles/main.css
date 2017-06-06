@@ -1,0 +1,24 @@
+html {
+    height: 100%;   /* make sure our HTML takes up 100% of browser window */
+    font-size: 100%;
+}
+
+body {
+    font-family: 'Open Sans';   /* sets our font to the Open Sans typeface */
+    color: white;               /* sets text color to white */
+    min-height: 100%;               /* says height of body must be, at min, 100% of the window */
+}
+
+body.landing {
+        background-color: rgb(58,32,63);    /* sets the background to an RGB value */
+}
+
+.navbar {
+    padding: 0.5rem;
+    background-color: rgb(101,18,95);
+}
+
+.navbar .logo {
+    position: relative;
+    left: 2rem;
+} /* left off at hero content */
