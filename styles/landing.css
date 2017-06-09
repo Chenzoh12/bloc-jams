@@ -2,16 +2,6 @@ body.landing {
         background-color: rgb(58,32,63);    /* sets the background to an RGB value */
 }
 
-.navbar {
-    padding: 0.5rem;
-    background-color: rgb(101,18,95);
-}
-
-.navbar .logo {
-    position: relative;
-    left: 2rem;
-}
-
 .hero-content {
   position: relative;
   min-height: 600px;  /* hero content element must be at least 600 pixels */
@@ -60,10 +50,4 @@ body.landing {
 .ion-music-note, .ion-radio-waves, .ion-iphone {
     color: rgb(233,50,117);
     font-size: 5rem;
-}
-
-*, *::before, *::after {
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
 }
