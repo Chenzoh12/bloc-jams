@@ -67,6 +67,10 @@ body {
   max-width: 64rem;
 }
 
+.container.narrow {
+  max-width: 56rem;
+}
+
 /* medium screens (640px)*/
 @media (min-width: 640px) {
   html {font-size: 112%;}
@@ -86,7 +90,7 @@ body {
 
 /* larger screens (1024px)*/
 @media (min-width: 1024px) {
-  html {font-size: 112%;}
+  html {font-size: 120%;}
 }
 
 .clearfix::before,
