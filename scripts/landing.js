@@ -12,7 +12,6 @@ var animatePoints = function(pointsArray) {
 
 //window. can be set to function to perform action
 window.onload = function() {
-
   if (window.innerHeight > 950) {
     animatePoints(pointsArray);
   }
