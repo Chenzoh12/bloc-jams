@@ -1,16 +1,6 @@
-
-
-  var pointsArray = document.getElementsByClassName('point');
-
-  function logIt(callback) {
-    callback();
+// function that takes in an array and a function;
+function forEach(array, callback) {
+  for(var i=0; i<array.length; i++) {
+    callback(array[i]);
   }
-
-  function testConsole() {
-  //Insert functionality here
-    console.log("Test: " + i)
-  }
-
-  for(var i=0; i<pointsArray.length; i++) {
-    logIt(testConsole);
-  }
+}
