@@ -34,3 +34,7 @@ body.collection {
 .collection-album-container img {
   width: 80%;
 }
+
+.collection-album-container a {
+    color: white;
+}
