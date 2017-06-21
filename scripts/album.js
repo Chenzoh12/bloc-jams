@@ -135,10 +135,10 @@ var clickHandler = function(targetElement) {
         currentlyPlayingSong = null;
     // If the clicked song is not the active song, set the content of the new song to the pause button:
     } else if (currentlyPlayingSong !== songItem.getAttribute('data-song-number')) {
-         var currentlyPlayingSongElement = document.querySelector('[data-song-number="' + currentlyPlayingSong + '"]');
-         currentlyPlayingSongElement.innerHTML = currentlyPlayingSongElement.getAttribute('data-song-number');
-         songItem.innerHTML = pauseButtonTemplate;
-         currentlyPlayingSong = songItem.getAttribute('data-song-number');
+        var currentlyPlayingSongElement = document.querySelector('[data-song-number="' + currentlyPlayingSong + '"]');
+        currentlyPlayingSongElement.innerHTML = currentlyPlayingSongElement.getAttribute('data-song-number');
+        songItem.innerHTML = pauseButtonTemplate;
+        currentlyPlayingSong = songItem.getAttribute('data-song-number');
     }
 };
 
@@ -158,7 +158,6 @@ window.onload = function() {
     songListContainer.addEventListener('mouseover', function(event) {
         if (event.target.parentElement.className === 'album-view-song-item') {
             // Change the content from the number to the play button's HTML
-            event.target.parentElement.querySelector('.song-item-number').innerHTML = playButtonTemplate;
             var songItem = getSongItem(event.target);
             // checks that the item the mouse is leaving is not the current song, and we only change the content if it isn't.
             if (songItem.getAttribute('data-song-number') !== currentlyPlayingSong) {
@@ -172,7 +171,9 @@ window.onload = function() {
             // cached the song item that we're leaving in a variable. Referencing  getSongItem() repeatedly causes multiple queries that can hinder performance
             var songItem = getSongItem(event.target);
             var songItemNumber = songItem.getAttribute('data-song-number');
-            if(songItemNumber !== currentlyPlayingSong) {
+
+            // #2
+            if (songItemNumber !== currentlyPlayingSong) {
                 songItem.innerHTML = songItemNumber;
             }
         });
